@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="librairieModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="livres">
+    <Key>
+      <PropertyRef Name="Id_livres" />
+    </Key>
+    <Property Name="Id_livres" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="auteur" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISBN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="datePub" Type="DateTime" Precision="3" />
+    <Property Name="prix" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="librairieEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="livres" EntityType="Self.livres" />
+  </EntityContainer>
+</Schema>
